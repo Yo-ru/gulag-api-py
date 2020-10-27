@@ -11,7 +11,7 @@ __all__ = (
 
 class Player:
     """\
-    A class to representing a gulag player.
+    A class representing a gulag player.
 
     Attributes
     ----------

@@ -10,7 +10,7 @@ __all__ = (
 
 class Server:
     """\
-    A class to representing the gulag server.
+    A class representing the gulag server.
     """
 
     @staticmethod
