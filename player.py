@@ -35,7 +35,7 @@ class Player:
             url += f"id={self.player}"
 
         # Make request to API.
-        self.request = requests.get(url)
+        self.request = requests.get(url, verify=not config.unsafe_request)
 
         # Make sure user exists.
         if self.request.content == b"User not found.":

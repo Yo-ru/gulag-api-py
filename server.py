@@ -23,5 +23,5 @@ class Server:
         int
             A int representing the server's online players.
         """
-        request = requests.get(f"https://{config.api_url}/api/get_online").json()
+        request = requests.get(f"https://{config.api_url}/api/get_online", verify=not config.unsafe_request).json()
         return request["online"]
