@@ -4,6 +4,15 @@ from typing import Union
 import config
 
 class Player:
+    """\
+    A class to representing a gulag player.
+
+    Attributes
+    ----------
+    player : Union[int, str]
+        The id or name of the player.
+    """
+
     __slots__ = (
         "player",
         "request"
@@ -27,7 +36,14 @@ class Player:
             raise Exception("Player not found!")
 
     def getID(self) -> int:
-        """ Returns id of Player. """
+        """\
+        Gets and prints the player's id.
+
+        Returns
+        -------
+        int
+            An int representing the player's id.
+        """
         return self.request.json()["id"]
 
     """
@@ -43,7 +59,19 @@ class Player:
     """
 
     def getPP(self, mode: int) -> int:
-        """ Returns pp for specified mode. """
+        """\
+        Gets and prints the player's pp for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        int
+            A int representing the player's pp.
+        """
         if mode == 0:
             return self.request.json()["pp_vn_std"]
         elif mode == 1:
@@ -64,7 +92,19 @@ class Player:
             raise Exception("Invalid mode selected!")
 
     def getTotalScore(self, mode: int) -> int:
-        """ Returns total score for specificed mode. """
+        """\
+        Gets and prints the player's total score for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        int
+            A int representing the player's total score.
+        """
         if mode == 0:
             return self.request.json()["tscore_vn_std"]
         elif mode == 1:
@@ -85,7 +125,19 @@ class Player:
             raise Exception("Invalid mode selected!")
 
     def getRankedScore(self, mode: int) -> int:
-        """ Returns ranked score for specified mode. """
+        """\
+        Gets and prints the player's ranked score for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        int
+            A int representing the player's ranked score.
+        """
         if mode == 0:
             return self.request.json()["rscore_vn_std"]
         elif mode == 1:
@@ -106,7 +158,19 @@ class Player:
             raise Exception("Invalid mode selected!")
 
     def getPlays(self, mode: int) -> int:
-        """ Returns plays for specified mode. """
+        """\
+        Gets and prints the player's plays for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        int
+            A int representing the player's plays.
+        """
         if mode == 0:
             return self.request.json()["plays_vn_std"]
         elif mode == 1:
@@ -127,7 +191,19 @@ class Player:
             raise Exception("Invalid mode selected!")
 
     def getPlayTime(self, mode: int) -> int:
-        """ Returns playtime for specified mode. """
+        """\
+        Gets and prints the player's playtime for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        int
+            A int representing the player's playtime.
+        """
         if mode == 0:
             return self.request.json()["playtime_vn_std"]
         elif mode == 1:
@@ -148,7 +224,19 @@ class Player:
             raise Exception("Invalid mode selected!")
 
     def getAcc(self, mode: int) -> float:
-        """ Returns accuracy for specified mode. """
+        """\
+        Gets and prints the player's accuracy for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        float
+            A float representing the player's accuracy.
+        """
         if mode == 0:
             return self.request.json()["acc_vn_std"]
         elif mode == 1:
@@ -169,7 +257,19 @@ class Player:
             raise Exception("Invalid mode selected!")
 
     def getMaxCombo(self, mode: int) -> int:
-        """ Returns maximum combo for specified mode. """
+        """\
+        Gets and prints the player's max combo for a certain mode.
+
+        Parameters
+        ----------
+        mode : int
+            A int representing the gamemode.
+
+        Returns
+        -------
+        int
+            A int representing the player's max combo.
+        """
         if mode == 0:
             return self.request.json()["maxcombo_vn_std"]
         elif mode == 1:
