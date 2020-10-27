@@ -13,14 +13,14 @@ class Player:
         self.player = player
 
         # Build URL.
-        url: str = f"http://{config.api_url}/api/get_stats?"
+        url: str = f"https://{config.api_url}/api/get_stats?"
         if type(self.player) is str:
             url += f"name={self.player}"
         elif type(self.player) is int:
             url += f"id={self.player}"
 
         # Make request to API.
-        self.request = requests.get(url, verify=False)
+        self.request = requests.get(url)
 
         # Make sure user exists.
         if self.request.content == b"User not found.":
