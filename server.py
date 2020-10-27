@@ -1,6 +1,12 @@
+""" Import modules. """
 import requests
 
+""" Import config. """
 import config
+
+__all__ = (
+    "Server"
+)
 
 class Server:
     """\

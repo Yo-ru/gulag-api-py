@@ -1,7 +1,13 @@
+""" Import modules. """
 import requests
 from typing import Union
 
+""" Import config. """
 import config
+
+__all__ = (
+    "Player"
+)
 
 class Player:
     """\
